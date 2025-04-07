@@ -25,22 +25,18 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.55);
+      background-color: rgba(0, 0, 0, 0.65); /* 濃いめの黒オーバーレイ */
       z-index: 0;
     }
 
     header * {
       position: relative;
       z-index: 1;
-    }
-
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.5em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 文字をくっきり見せる影 */
     }
 
     .highlight {
-      color: #ff4444;
+      color: #e60000;
       font-weight: bold;
     }
 
@@ -58,8 +54,8 @@
     .about-container {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       gap: 20px;
+      align-items: center;
     }
 
     .about-container img {
@@ -72,7 +68,6 @@
 
     .about-text {
       flex: 1;
-      font-size: 1.1em;
     }
 
     .services {
@@ -98,35 +93,49 @@
     }
 
     .repeat-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                  url('final_repeat.jpg') no-repeat center center / cover;
+      background: url('final_repeat.jpg') no-repeat center center / cover;
+      padding: 80px 20px;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      position: relative;
+    }
+
+    .repeat-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .repeat-section * {
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     }
 
     .repeat-section h2 {
       font-size: 2em;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .repeat-section p {
-      margin: 10px 0;
+      margin: 8px 0;
       font-size: 1.1em;
     }
 
     .repeat-highlight {
-      font-size: 1.6em;
-      color: #ff4444;
+      color: #ff3333;
+      font-size: 1.5em;
       font-weight: bold;
-      margin-top: 30px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- トップセクション -->
+  <!-- トップ -->
   <header>
     <h1>JAPANLEASE LTD.</h1>
     <p><strong>Tell us about your renovation plans and budget.</strong></p>
@@ -147,7 +156,7 @@
   <section class="section" id="about">
     <h2>About us</h2>
     <div class="about-container">
-      <img src="final_about_us.jpg" alt="Interior View">
+      <img src="final_about_us.jpg" alt="About JapanLease">
       <div class="about-text">
         <p>JAPANLEASE Co., Ltd. is a professional contractor based in Tokyo, specializing in interior renovations, remodeling, and restoration work.</p>
         <p>We are committed to delivering high-quality services with flexible and attentive support tailored to each client’s needs.</p>
@@ -189,10 +198,9 @@
     </div>
   </section>
 
-  <!-- Repeat Section -->
+  <!-- Repeatセクション -->
   <section class="repeat-section">
-    <h2>Not just affordable!</h2>
-    <h2>We’re confident in the quality of our work too!</h2>
+    <h2>Not just affordable!<br>We’re confident in the quality of our work too!</h2>
     <p>We accept a wide range of requests from both corporations and individuals!</p>
     <p>For construction companies and architectural firms</p>
     <p>For businesses such as shops and offices</p>
