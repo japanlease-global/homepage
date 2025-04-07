@@ -14,29 +14,33 @@
 
     header {
       position: relative;
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center / cover;
-      height: auto;
-      padding: 80px 20px;
-      color: white;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
       text-align: center;
+      color: white;
     }
 
     header::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.65); /* 濃いめの黒オーバーレイ */
-      z-index: 0;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
-    header * {
+    header > * {
       position: relative;
       z-index: 1;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 文字をくっきり見せる影 */
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
     }
 
     .highlight {
-      color: #e60000;
+      color: #ff3333;
       font-weight: bold;
     }
 
@@ -55,15 +59,11 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      align-items: center;
     }
 
     .about-container img {
-      flex: 1;
       max-width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
+      flex: 1;
     }
 
     .about-text {
@@ -93,70 +93,108 @@
     }
 
     .repeat-section {
-      background: url('final_repeat.jpg') no-repeat center center / cover;
-      padding: 80px 20px;
+      background-image: url('final_repeat.jpg');
+      background-size: cover;
+      background-position: center;
       color: white;
+      padding: 100px 20px;
       text-align: center;
-      position: relative;
-    }
-
-    .repeat-section::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0,0,0,0.6);
-      z-index: 0;
-    }
-
-    .repeat-section * {
-      position: relative;
-      z-index: 1;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     }
 
     .repeat-section h2 {
       font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .repeat-section p {
-      margin: 8px 0;
       font-size: 1.1em;
+      line-height: 1.6em;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .repeat-highlight {
-      color: #ff3333;
+      color: red;
       font-size: 1.5em;
       font-weight: bold;
       margin-top: 20px;
+    }
+
+    .reason-section {
+      background: linear-gradient(to right, #ffffff, #f9f9f9);
+      padding: 80px 20px;
+    }
+
+    .reason-section h2 {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+
+    .reason-box {
+      margin-bottom: 50px;
+    }
+
+    .reason-title {
+      background-color: #000;
+      color: #fff;
+      display: inline-block;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 1.1em;
+    }
+
+    .reason-text {
+      margin-top: 10px;
+      padding-left: 10px;
+      line-height: 1.6em;
+    }
+
+    .reason-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .reason-cta a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- トップ -->
   <header>
     <h1>JAPANLEASE LTD.</h1>
     <p><strong>Tell us about your renovation plans and budget.</strong></p>
     <p>
-      We provide flexible solutions tailored to your needs,<br>
-      and making sure you get exactly what you're looking for.<br>
-      Everything we do is guided by one simple idea:<br>
-      <span class="highlight">"For our clients, with their perspective in mind."</span><br>
+      We provide flexible solutions tailored to your needs,<br />
+      and making sure you get exactly what you're looking for.<br />
+      Everything we do is guided by one simple idea:<br />
+      <span class="highlight">"For our clients, with their perspective in mind."</span><br />
       Our team is committed to our work and approaches each project with sincerity and dedication.
     </p>
-    <p><strong>
-      Direct negotiation offers significantly lower costs<br>
-      than working through other companies.
-    </strong></p>
+    <p>
+      <strong>
+        Direct negotiation offers significantly lower costs<br />
+        than working through other companies.
+      </strong>
+    </p>
   </header>
 
-  <!-- About us -->
-  <section class="section" id="about">
+  <section class="section">
     <h2>About us</h2>
     <div class="about-container">
-      <img src="final_about_us.jpg" alt="About JapanLease">
+      <img src="final_about_us.jpg" alt="Office interior">
       <div class="about-text">
         <p>JAPANLEASE Co., Ltd. is a professional contractor based in Tokyo, specializing in interior renovations, remodeling, and restoration work.</p>
         <p>We are committed to delivering high-quality services with flexible and attentive support tailored to each client’s needs.</p>
@@ -167,50 +205,78 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section" id="services">
+  <section class="section">
     <h2>SERVICES</h2>
     <div class="services">
       <div class="service-box">
-        <img src="final_wallpaper_replacement.jpg" alt="Wallpaper Replacement">
-        <h3>Wallpaper Replacement</h3>
+        <img src="final_wallpaper_replacement.jpg" alt="Wallpaper">
+        <p><strong>Wallpaper Replacement</strong></p>
       </div>
       <div class="service-box">
-        <img src="final_flooring_replacement.jpg" alt="Flooring Replacement">
-        <h3>Flooring Replacement</h3>
+        <img src="final_flooring_replacement.jpg" alt="Flooring">
+        <p><strong>Flooring Replacement</strong></p>
       </div>
       <div class="service-box">
-        <img src="final_layout_modification.jpg" alt="Layout Modification Renovation">
-        <h3>Layout Modification Renovation</h3>
+        <img src="final_layout_modification.jpg" alt="Layout">
+        <p><strong>Layout Modification Renovation</strong></p>
       </div>
       <div class="service-box">
-        <img src="final_cleaning_services.jpg" alt="Professional Cleaning Services">
-        <h3>Professional Cleaning Services</h3>
+        <img src="final_cleaning_services.jpg" alt="Cleaning">
+        <p><strong>Professional Cleaning Services</strong></p>
       </div>
       <div class="service-box">
-        <img src="final_water_related.jpg" alt="Water-related Renovations">
-        <h3>Water-related Renovations</h3>
+        <img src="final_water_related.jpg" alt="Water">
+        <p><strong>Water-related Renovations</strong></p>
       </div>
       <div class="service-box">
         <img src="final_others.jpg" alt="Others">
-        <h3>Others</h3>
+        <p><strong>Others</strong></p>
       </div>
     </div>
   </section>
 
-  <!-- Repeatセクション -->
   <section class="repeat-section">
-    <h2>Not just affordable!<br>We’re confident in the quality of our work too!</h2>
-    <p>We accept a wide range of requests from both corporations and individuals!</p>
-    <p>For construction companies and architectural firms</p>
-    <p>For businesses such as shops and offices</p>
-    <p>For property owners with rental units</p>
-    <p>For individuals living in houses or condominiums</p>
-    <p>No matter the scale of the interior work, feel free to contact us.</p>
-    <p class="repeat-highlight">Repeat rate for interior construction: 98%</p>
+    <h2>Not just affordable!<br />We’re confident in the quality of our work too!</h2>
+    <p>
+      We accept a wide range of requests from both corporations and individuals!<br />
+      For construction companies and architectural firms<br />
+      For businesses such as shops and offices<br />
+      For property owners with rental units<br />
+      For individuals living in houses or condominiums<br />
+      No matter the scale of the interior work, feel free to contact us.
+    </p>
+    <div class="repeat-highlight">Repeat rate for interior construction: 98%</div>
   </section>
 
+  <section class="reason-section">
+    <h2>Why We Can Offer Interior Construction at Affordable Prices</h2>
 
+    <div class="reason-box">
+      <div class="reason-title">01 Strong relationships with many manufacturers allow us to source materials at lower costs.</div>
+      <p class="reason-text">
+        We are able to procure interior construction materials at much more affordable prices than other companies.<br />
+        (Panasonic, TOTO, INAX, Daikin, etc.)
+      </p>
+    </div>
+
+    <div class="reason-box">
+      <div class="reason-title">02 Short construction periods reduce labor costs, and the work is done carefully and efficiently!</div>
+      <p class="reason-text">
+        By completing projects in a short time, we’re able to keep labor costs low.
+      </p>
+    </div>
+
+    <div class="reason-box">
+      <div class="reason-title">03 Bulk purchasing of materials keeps costs down even further!</div>
+      <p class="reason-text">
+        By purchasing materials in large quantities all at once, we achieve unbeatable prices!
+      </p>
+    </div>
+
+    <div class="reason-cta">
+      <a href="#">➤ Click here to learn more about how we keep prices low</a>
+    </div>
+  </section>
 
 </body>
 </html>
