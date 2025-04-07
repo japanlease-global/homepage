@@ -12,37 +12,24 @@
       color: #333;
     }
 
-    /* トップセクション */
     header {
-      position: relative;
-      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
       background-position: center;
-      padding: 100px 20px;
+      padding: 80px 20px;
       color: white;
       text-align: center;
     }
 
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 0;
-    }
-
-    header * {
-      position: relative;
-      z-index: 1;
-    }
-
     header h1 {
-      font-size: 3em;
+      font-size: 2.8em;
       margin-bottom: 0.5em;
     }
 
     .highlight {
-      color: #ff3333;
+      color: #e60000;
       font-weight: bold;
     }
 
@@ -57,24 +44,24 @@
       margin-bottom: 20px;
     }
 
-    /* About Us セクション */
     .about-container {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 20px;
     }
 
     .about-container img {
-      max-width: 100%;
       flex: 1;
-      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
     }
 
     .about-text {
       flex: 1;
+      font-size: 1.1em;
     }
 
-    /* Services セクション */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,60 +79,64 @@
 
     .service-box img {
       width: 100%;
-      height: 160px;
+      height: 180px;
       object-fit: cover;
       border-radius: 6px;
     }
 
-    /* Repeat セクション */
     .repeat-section {
-      background-image: url('final_repeat.jpg');
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('final_repeat.jpg');
       background-size: cover;
       background-position: center;
-      color: #000;
+      color: white;
+      padding: 60px 20px;
       text-align: center;
-      padding: 80px 20px;
-    }
-
-    .repeat-overlay {
-      background-color: rgba(255,255,255,0.85);
-      padding: 50px 20px;
-      max-width: 800px;
-      margin: auto;
-      border-radius: 12px;
     }
 
     .repeat-section h2 {
       font-size: 2em;
-      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .repeat-section p {
+      margin: 10px 0;
+      font-size: 1.1em;
     }
 
     .repeat-highlight {
-      color: red;
-      font-size: 1.4em;
+      font-size: 1.6em;
+      color: #ff3333;
       font-weight: bold;
       margin-top: 20px;
     }
-
   </style>
 </head>
 <body>
+
+  <!-- トップ -->
   <header>
     <h1>JAPANLEASE LTD.</h1>
     <p><strong>Tell us about your renovation plans and budget.</strong></p>
-    <p>We provide flexible solutions tailored to your needs,<br>
-    and making sure you get exactly what you're looking for.<br>
-    Everything we do is guided by one simple idea:<br>
-    <span class="highlight">"For our clients, with their perspective in mind."</span><br>
-    Our team is committed to our work and approaches each project with sincerity and dedication.</p>
-    <p><strong>Direct negotiation offers significantly lower costs<br>
-    than working through other companies.</strong></p>
+    <p>
+      We provide flexible solutions tailored to your needs,<br>
+      and making sure you get exactly what you're looking for.<br>
+      Everything we do is guided by one simple idea:<br>
+      <span class="highlight">"For our clients, with their perspective in mind."</span><br>
+      Our team is committed to our work and approaches each project with sincerity and dedication.
+    </p>
+    <p><strong>
+      Direct negotiation offers significantly lower costs<br>
+      than working through other companies.
+    </strong></p>
   </header>
 
-  <section class="section">
+  <!-- About us -->
+  <section class="section" id="about">
     <h2>About us</h2>
     <div class="about-container">
-      <img src="final_about_us.jpg" alt="Interior View" />
+      <img src="final_about_us.jpg" alt="Interior View">
       <div class="about-text">
         <p>JAPANLEASE Co., Ltd. is a professional contractor based in Tokyo, specializing in interior renovations, remodeling, and restoration work.</p>
         <p>We are committed to delivering high-quality services with flexible and attentive support tailored to each client’s needs.</p>
@@ -156,48 +147,49 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- Services -->
+  <section class="section" id="services">
     <h2>SERVICES</h2>
     <div class="services">
       <div class="service-box">
-        <img src="final_wallpaper_replacement.jpg" alt="Wallpaper Replacement" />
-        <p><strong>Wallpaper Replacement</strong></p>
+        <img src="final_wallpaper_replacement.jpg" alt="Wallpaper Replacement">
+        <h3>Wallpaper Replacement</h3>
       </div>
       <div class="service-box">
-        <img src="final_flooring_replacement.jpg" alt="Flooring Replacement" />
-        <p><strong>Flooring Replacement</strong></p>
+        <img src="final_flooring_replacement.jpg" alt="Flooring Replacement">
+        <h3>Flooring Replacement</h3>
       </div>
       <div class="service-box">
-        <img src="final_layout_modification.jpg" alt="Layout Modification Renovation" />
-        <p><strong>Layout Modification Renovation</strong></p>
+        <img src="final_layout_modification.jpg" alt="Layout Modification Renovation">
+        <h3>Layout Modification Renovation</h3>
       </div>
       <div class="service-box">
-        <img src="final_cleaning_services.jpg" alt="Cleaning Services" />
-        <p><strong>Professional Cleaning Services</strong></p>
+        <img src="final_cleaning_services.jpg" alt="Professional Cleaning Services">
+        <h3>Professional Cleaning Services</h3>
       </div>
       <div class="service-box">
-        <img src="final_water_related.jpg" alt="Water-related Renovations" />
-        <p><strong>Water-related Renovations</strong></p>
+        <img src="final_water_related.jpg" alt="Water-related Renovations">
+        <h3>Water-related Renovations</h3>
       </div>
       <div class="service-box">
-        <img src="final_others.jpg" alt="Others" />
-        <p><strong>Others</strong></p>
+        <img src="final_others.jpg" alt="Others">
+        <h3>Others</h3>
       </div>
     </div>
   </section>
 
+  <!-- Repeat section -->
   <section class="repeat-section">
-    <div class="repeat-overlay">
-      <h2>Not just affordable!</h2>
-      <h2>We’re confident in the quality of our work too!</h2>
-      <p>We accept a wide range of requests from both corporations and individuals!<br>
-      For construction companies and architectural firms<br>
-      For businesses such as shops and offices<br>
-      For property owners with rental units<br>
-      For individuals living in houses or condominiums<br>
-      No matter the scale of the interior work, feel free to contact us.</p>
-      <p class="repeat-highlight">Repeat rate for interior construction: 98%</p>
-    </div>
+    <h2>Not just affordable!</h2>
+    <h2>We’re confident in the quality of our work too!</h2>
+    <p>We accept a wide range of requests from both corporations and individuals!</p>
+    <p>For construction companies and architectural firms</p>
+    <p>For businesses such as shops and offices</p>
+    <p>For property owners with rental units</p>
+    <p>For individuals living in houses or condominiums</p>
+    <p>No matter the scale of the interior work, feel free to contact us.</p>
+    <p class="repeat-highlight">Repeat rate for interior construction: 98%</p>
   </section>
+
 </body>
 </html>
