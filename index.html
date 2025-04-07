@@ -13,14 +13,25 @@
     }
 
     header {
-      background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center / cover;
+      height: auto;
       padding: 80px 20px;
       color: white;
       text-align: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
@@ -29,7 +40,7 @@
     }
 
     .highlight {
-      color: #e60000;
+      color: #ff4444;
       font-weight: bold;
     }
 
@@ -55,6 +66,8 @@
       flex: 1;
       max-width: 100%;
       height: auto;
+      max-height: 400px;
+      object-fit: cover;
     }
 
     .about-text {
@@ -85,11 +98,8 @@
     }
 
     .repeat-section {
-      background: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url('final_repeat.jpg');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('final_repeat.jpg') no-repeat center center / cover;
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -98,6 +108,7 @@
     .repeat-section h2 {
       font-size: 2em;
       font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .repeat-section p {
@@ -107,15 +118,15 @@
 
     .repeat-highlight {
       font-size: 1.6em;
-      color: #ff3333;
+      color: #ff4444;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <!-- トップ -->
+  <!-- トップセクション -->
   <header>
     <h1>JAPANLEASE LTD.</h1>
     <p><strong>Tell us about your renovation plans and budget.</strong></p>
@@ -147,7 +158,7 @@
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- Services（変更なし） -->
   <section class="section" id="services">
     <h2>SERVICES</h2>
     <div class="services">
@@ -178,7 +189,7 @@
     </div>
   </section>
 
-  <!-- Repeat section -->
+  <!-- Repeat Section -->
   <section class="repeat-section">
     <h2>Not just affordable!</h2>
     <h2>We’re confident in the quality of our work too!</h2>
