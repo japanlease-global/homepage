@@ -5,125 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JapanLease Ltd.</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      color: #222;
+      background-color: #f4f4f4;
+      line-height: 1.6;
     }
-    header {
-      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      padding: 80px 20px;
-      color: white;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px;
+      position: relative;
     }
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.5em;
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
-    .highlight {
-      color: #e60000;
-      font-weight: bold;
+    .hero .content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
     }
-    .section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-    .section h2 {
-      font-size: 2em;
+    .hero h1 {
+      font-size: 3em;
       margin-bottom: 20px;
     }
-    .about-container {
+    .hero p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .highlight {
+      color: #f44336;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .about {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 30px;
     }
-    .about-container img {
-      max-width: 100%;
-      flex: 1;
-    }
-    .about-text {
-      flex: 1;
+    .about img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
     }
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      margin-top: 30px;
     }
-    .service-box {
-      background-color: white;
-      padding: 10px;
+    .card {
+      background: #fff;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .service-box img {
+    .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      border-radius: 6px;
+      margin-bottom: 10px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>JAPANLEASE LTD.</h1>
-    <p><strong>Tell us about your renovation plans and budget.</strong></p>
-    <p>We provide flexible solutions tailored to your needs,<br>
-    and making sure you get exactly what you're looking for.<br>
-    Everything we do is guided by one simple idea:<br>
-    <span class="highlight">"For our clients, with their perspective in mind."</span><br>
-    Our team is committed to our work and approaches each project with sincerity and dedication.</p>
-    <p><strong>Direct negotiation offers significantly lower costs<br>
-    than working through other companies.</strong></p>
-  </header>
-
-  <div class="section">
-    <h2>About us</h2>
-    <div class="about-container">
-      <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Interior View">
-      <div class="about-text">
-        <p>JAPANLEASE Co., Ltd. is a professional contractor based in Tokyo, specializing in interior renovations, remodeling, and restoration work.</p>
-        <p>We are committed to delivering high-quality services with flexible and attentive support tailored to each client’s needs.</p>
-        <p>From on-site surveys and estimates to construction and aftercare, our team handles every step in-house.</p>
-        <p>Because we work directly with our clients — without any intermediaries — we’re able to offer more competitive pricing than other companies.</p>
-        <p>We take pride in offering solutions from the customer’s perspective, striving every day to be a trusted partner.</p>
-      </div>
+  <div class="hero">
+    <div class="content">
+      <h1>JAPANLEASE LTD.</h1>
+      <p><strong>Tell us about your renovation plans and budget.</strong></p>
+      <p>We provide flexible solutions tailored to your needs,<br>and making sure you get exactly what you're looking for.<br>
+      Everything we do is guided by one simple idea:<br>
+      <span class="highlight">"For our clients, with their perspective in mind."</span><br>
+      Our team is committed to our work and approaches each project with sincerity and dedication.</p>
+      <p><strong>Direct negotiation offers significantly lower costs<br>than working through other companies.</strong></p>
     </div>
   </div>
 
-  <div class="section">
+  <section>
+    <h2>About us</h2>
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1600585153837-840fef1ae45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Interior View">
+      <p>JAPANLEASE Co., Ltd. is a professional contractor based in Tokyo, specializing in interior renovations, remodeling, and restoration work.<br><br>
+      We are committed to delivering high-quality services with flexible and attentive support tailored to each client’s needs.<br><br>
+      From on-site surveys and estimates to construction and aftercare, our team handles every step in-house.<br><br>
+      Because we work directly with our clients — without any intermediaries — we’re able to offer more competitive pricing than other companies.<br><br>
+      We take pride in offering solutions from the customer’s perspective, striving every day to be a trusted partner.</p>
+    </div>
+  </section>
+
+  <section>
     <h2>SERVICES</h2>
     <div class="services">
-      <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1600047504763-2f5e6e03ab62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wallpaper Replacement">
-        <p>Wallpaper Replacement</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?wallpaper,interior" alt="Wallpaper Replacement">
+        <p><strong>Wallpaper Replacement</strong></p>
       </div>
-      <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1600585154154-2e1cdeecdb14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Flooring Replacement">
-        <p>Flooring Replacement</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?flooring,interior" alt="Flooring Replacement">
+        <p><strong>Flooring Replacement</strong></p>
       </div>
-      <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1600585153967-3c36c78900d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Layout Modification">
-        <p>Layout Modification Renovation</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?modern,renovation" alt="Layout Modification">
+        <p><strong>Layout Modification Renovation</strong></p>
       </div>
-      <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1600047504477-4e5e9e7c8079?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cleaning">
-        <p>Professional Cleaning Services</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?cleaning,interior" alt="Cleaning">
+        <p><strong>Professional Cleaning Services</strong></p>
       </div>
-      <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1600047505115-e495a86a9b27?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Water-related Renovations">
-        <p>Water-related Renovations</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?bathroom,renovation" alt="Water-related Renovations">
+        <p><strong>Water-related Renovations</strong></p>
       </div>
-      <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1600047504933-5c0c15f6f0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Others">
-        <p>Others</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?architecture,design" alt="Others">
+        <p><strong>Others</strong></p>
       </div>
     </div>
-  </div>
+  </section>
 </body>
 </html>
