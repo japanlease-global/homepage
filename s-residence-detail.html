@@ -4,47 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>S Residence – Wallpaper Installation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
       padding: 40px;
-      color: #333;
+      margin: 0;
     }
+
     h1 {
+      text-align: center;
       font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
+
     h2 {
-      font-size: 22px;
-      margin: 20px 0 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      margin-left: 40px;
+      margin-bottom: 10px;
     }
-    .image-group {
+
+    .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      align-items: flex-start;
+      margin-left: 40px;
+      margin-bottom: 50px;
     }
-    .image-group img {
+
+    .gallery img {
       width: 300px;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: transform 0.3s ease;
     }
-    .image-group img:hover {
-      transform: scale(1.03);
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
-    .back {
-      margin-top: 40px;
+
+    .back-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
     }
-    .back a {
-      text-decoration: none;
+
+    .back-button a {
       background-color: #000;
       color: #fff;
-      padding: 10px 18px;
-      border-radius: 6px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .back-button a:hover {
+      background-color: #333;
     }
   </style>
 </head>
@@ -53,27 +70,27 @@
   <h1>S Residence – Wallpaper Installation</h1>
 
   <h2>Before</h2>
-  <div class="image-group">
+  <div class="gallery">
     <a href="images/s-residence-before1.jpg" target="_blank">
-      <img src="images/s-residence-before1.jpg" alt="Before 1">
+      <img src="images/s-residence-before1.jpg" alt="Before 1" />
     </a>
     <a href="images/s-residence-before2.jpg" target="_blank">
-      <img src="images/s-residence-before2.jpg" alt="Before 2">
+      <img src="images/s-residence-before2.jpg" alt="Before 2" />
     </a>
   </div>
 
   <h2>After</h2>
-  <div class="image-group">
+  <div class="gallery">
     <a href="images/s-residence-after1.jpg" target="_blank">
-      <img src="images/s-residence-after1.jpg" alt="After 1">
+      <img src="images/s-residence-after1.jpg" alt="After 1" />
     </a>
     <a href="images/s-residence-after2.jpg" target="_blank">
-      <img src="images/s-residence-after2.jpg" alt="After 2">
+      <img src="images/s-residence-after2.jpg" alt="After 2" />
     </a>
   </div>
 
-  <div class="back">
-    <a href="wallpaper.html">← Back to Page 1</a>
+  <div class="back-button">
+    <a href="wallpaper.html">← Back to Project Gallery</a>
   </div>
 
 </body>
