@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Flooring Replacement</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flooring Replacement | JapanLease</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
       color: #333;
     }
+
     .hero {
-      background: url('final_flooring_replacement.jpg') no-repeat center center / cover;
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      color: white;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-    }
-    .hero h1 {
-      position: relative;
-      z-index: 1;
-      font-size: 2.5rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      width: 100%;
+      max-height: 500px;
+      overflow: hidden;
     }
 
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
-    .content h2 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: #000;
+
+    .info-section {
+      background-color: white;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .info-section p {
+      font-size: 0.95em;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    .info-section strong {
+      font-size: 1.05em;
     }
   </style>
 </head>
 <body>
 
+  <!-- Top image -->
   <div class="hero">
-    <h1>Flooring Replacement</h1>
+    <img src="final_flooring_replacement.jpg" alt="Flooring replacement image" />
   </div>
 
-  <div class="content">
-    <h2>Floor Material Replacement / Overlay Installation</h2>
-    <p>
-      In pet-friendly apartments, flooring replacement is often essential at the time of moving out.
-    </p>
-    <p>
-      We offer waterproof flooring, cushion floors, and other options tailored to your lifestyle.
-    </p>
-  </div>
-
-</body>
-</html>
+  <!-- Info text -->
+  <section class="info-section">
+    <p><strong>Flooring Replacement and Overlay Services</strong></p>
+    <p>Replacing flooring is often essential when moving out of pet-friendly apartments.</p>
+    <p>We offer waterproof flooring, cushioned flooring, and more to suit your lifestyle needs.</p>
