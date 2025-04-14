@@ -58,7 +58,13 @@
 
   <div class="form-container">
     <h2>Contact Form</h2>
-    <form action="confirm.html" method="post">
+
+    <form action="https://formspree.io/f/mvgkyopl" method="POST">
+      <!-- 🔁 成功後に thanks.html にリダイレクト -->
+      <input type="hidden" name="_redirect" value="https://tokyo-japanlease-global.jp/thanks.html">
+      <!-- 🤖 スパム対策 -->
+      <input type="text" name="_gotcha" style="display:none">
+
       <label for="company">Company Name</label>
       <input type="text" id="company" name="company" required>
 
@@ -80,7 +86,7 @@
         <option value="English">English (with interpreter)</option>
       </select>
 
-      <button type="submit">Confirm</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 
