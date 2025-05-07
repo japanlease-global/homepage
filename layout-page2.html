@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout Projects - Page 2</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    .section-title {
+      text-align: center;
+      padding: 60px 20px 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 30%;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card h3 {
+      padding: 15px;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin: 10px 15px 15px;
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .pagination {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .pagination a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section-title">Layout Modification Renovation Examples</div>
+
+  <div class="gallery">
+    <!-- 13 -->
+    <div class="card">
+      <img src="images/Toshima City – Osteopathic Clinic Layout Modification-after.jpg" alt="Project 13" />
+      <h3>Toshima City – Osteopathic Clinic Layout Modification</h3>
+      <a href="Toshima City – Osteopathic Clinic Layout Modification-layout.html">View Details</a>
+    </div>
+
+    <!-- 14 -->
+    <div class="card">
+      <img src="images/Arakawa Ward – Bone-setting Clinic Partition Wall Construction-after.jpg" alt="Project 14" />
+      <h3>Arakawa Ward – Bone-setting Clinic Partition Wall Construction</h3>
+      <a href=Arakawa Ward – Bone-setting Clinic Partition Wall Construction-layout.html>View Details</a>
+    </div>
+
+    <!-- 15 -->
+    <div class="card">
+      <img src="images/Shibuya Ward – Wall Construction with Wallpaper Finish-after.jpg" alt="Project 15" />
+      <h3>Shibuya Ward – Wall Construction with Wallpaper Finish</h3>
+      <a href=Shibuya Ward – Wall Construction with Wallpaper Finish-layout.html>View Details</a>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <a href="layout.html">← Back to Page 1</a>
+  </div>
+
+</body>
+</html>
