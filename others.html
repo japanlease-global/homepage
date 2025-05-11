@@ -1,150 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Other Renovation Services</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f8f8;
       margin: 0;
-      padding: 0;
+      padding: 40px 20px;
     }
-
-    .section-title {
+    h1 {
       text-align: center;
-      padding: 60px 20px 20px;
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 32px;
+      margin-bottom: 50px;
     }
-
-    .service-section {
+    .section {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      max-width: 1200px;
-      margin: 60px auto;
       gap: 40px;
-      padding: 0 20px;
+      align-items: center;
+      margin-bottom: 80px;
+      justify-content: center;
     }
-
-    .service-section:nth-child(even) {
+    .section:nth-child(even) {
       flex-direction: row-reverse;
     }
-
-    .service-text {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .service-text h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #222;
-    }
-
-    .service-text ul {
-      padding-left: 20px;
-      line-height: 1.8;
-    }
-
-    .service-image {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .service-image img {
+    .section img {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
-    @media (max-width: 768px) {
-      .service-section {
-        flex-direction: column !important;
-        text-align: center;
-      }
+    .section-text {
+      max-width: 500px;
+    }
+    .section-text h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .section-text ul {
+      list-style: none;
+      padding: 0;
+      font-size: 16px;
+    }
+    .section-text li {
+      margin-bottom: 10px;
+    }
+    .section-text li a {
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .section-text li a:hover {
+      color: #007BFF;
+      border-color: #007BFF;
     }
   </style>
 </head>
 <body>
 
-  <div class="section-title">Other Renovation Services</div>
+  <h1>Other Renovation Services</h1>
 
-  <!-- 1. Exterior Work -->
-  <div class="service-section">
-    <div class="service-image">
-      <img src="images/Apartment Basement Parking Lot Repair Work in Akishima City-after1.jpg" alt="Exterior Work">
-    </div>
-    <div class="service-text">
+  <div class="section">
+    <div class="section-text">
       <h2>Exterior Work</h2>
       <ul>
-        <li>Apartment Basement Parking Lot Repair Work in Akishima City</li>
-        <li>Tile Installation on Apartment Balcony</li>
+        <li><a href="project-akishima-parking.html">Apartment Basement Parking Lot Repair Work in Akishima City</a></li>
+        <li><a href="project-balcony-tile.html">Tile Installation on Apartment Balcony</a></li>
       </ul>
     </div>
+    <img src="images/Apartment Basement Parking Lot Repair Work in Akishima City-after1.jpg" alt="Exterior Work">
   </div>
 
-  <!-- 2. Painting Work -->
-  <div class="service-section">
-    <div class="service-image">
-      <img src="images/Roof Painting Work at Mr. S’s Residence in Arakawa Ward-after1.jpg" alt="Painting Work">
-    </div>
-    <div class="service-text">
+  <div class="section">
+    <div class="section-text">
       <h2>Painting Work</h2>
       <ul>
-        <li>Roof Painting Work at Mr. S’s Residence in Arakawa Ward</li>
-        <li>Exterior Wall Painting of a Condominium in Arakawa Ward</li>
+        <li><a href="project-arakawa-roof.html">Roof Painting Work at Mr. S’s Residence in Arakawa Ward</a></li>
+        <li><a href="project-arakawa-wall.html">Exterior Wall Painting of a Condominium in Arakawa Ward</a></li>
       </ul>
     </div>
+    <img src="images/Roof Painting Work at Mr. S’s Residence in Arakawa Ward-after1.jpg" alt="Painting Work">
   </div>
 
-  <!-- 3. Air Conditioner Installation -->
-  <div class="service-section">
-    <div class="service-image">
-      <img src="images/Air Conditioner Installation at Mr. S’s Residence in Arakawa Ward-after.jpg" alt="Air Conditioner Installation">
-    </div>
-    <div class="service-text">
+  <div class="section">
+    <div class="section-text">
       <h2>Air Conditioner Installation</h2>
       <ul>
-        <li>Air Conditioner Installation at Mr. S’s Residence in Arakawa Ward</li>
-        <li>Air Conditioner Installation at a Condominium in Chiyoda Ward</li>
+        <li><a href="project-arakawa-ac.html">Air Conditioner Installation at Mr. S’s Residence in Arakawa Ward</a></li>
+        <li><a href="project-chiyoda-ac.html">Air Conditioner Installation at a Condominium in Chiyoda Ward</a></li>
       </ul>
     </div>
+    <img src="images/Air Conditioner Installation at Mr. S’s Residence in Arakawa Ward-after.jpg" alt="Air Conditioning">
   </div>
 
-  <!-- 4. General Renovation -->
-  <div class="service-section">
-    <div class="service-image">
-      <img src="images/Comprehensive Renovation of a Vacant Space in Katsushika Ward, Tokyo-after.jpg" alt="General Renovation">
-    </div>
-    <div class="service-text">
+  <div class="section">
+    <div class="section-text">
       <h2>General Renovation</h2>
       <ul>
-        <li>Comprehensive Renovation of a Vacant Space in Katsushika Ward</li>
-        <li>Ramen Restaurant Renovation in Nishiogu, Arakawa Ward</li>
-        <li>Condominium Renovation in Higashi-Jujo</li>
-        <li>Storefront Renovation in Sangenjaya Station Area</li>
-        <li>One-Room Apartment in Funabori, Edogawa Ward</li>
-        <li>One-Room Apartment Renovation in Arakawa Ward</li>
+        <li><a href="project-katsushika-renovation.html">Comprehensive Renovation of a Vacant Space in Katsushika Ward, Tokyo</a></li>
+        <li><a href="project-nishiogu-ramen.html">Ramen Restaurant Renovation in Nishiogu, Arakawa Ward</a></li>
+        <li><a href="project-higashijujo.html">Condominium Renovation in Higashi-Jujo</a></li>
+        <li><a href="project-sangenjaya-store.html">Storefront Renovation in Sangenjaya Station Area</a></li>
+        <li><a href="project-funabori.html">One-Room Apartment in Funabori, Edogawa Ward</a></li>
+        <li><a href="project-arakawa-oneroom.html">One-Room Apartment Renovation in Arakawa Ward, Tokyo</a></li>
       </ul>
     </div>
+    <img src="images/Condominium Renovation in Higashi-Jujo-after3.jpg" alt="Renovation">
   </div>
 
-  <!-- 5. Other Construction Work -->
-  <div class="service-section">
-    <div class="service-image">
-      <img src="images/Wood Deck Construction Due to Termite Damage in Arakawa Ward-after.jpg" alt="Other Construction">
-    </div>
-    <div class="service-text">
+  <div class="section">
+    <div class="section-text">
       <h2>Other Construction Work</h2>
       <ul>
-        <li>Wood Deck Construction Due to Termite Damage in Arakawa Ward</li>
-        <li>Booth Construction at Tokyo Big Sight Event Venue</li>
-        <li>Sash Installation Work in Kuramae, Taito Ward</li>
+        <li><a href="project-arakawa-wooddeck.html">Wood Deck Construction Due to Termite Damage in Arakawa Ward</a></li>
+        <li><a href="project-bigsight-booth.html">Booth Construction at Tokyo Big Sight Event Venue</a></li>
+        <li><a href="project-kuramae-sash.html">Sash Installation Work in Kuramae, Taito Ward</a></li>
       </ul>
     </div>
+    <img src="images/Booth Construction at Tokyo Big Sight Event Venue-after.jpg" alt="Other Construction Work">
   </div>
 
 </body>
