@@ -11,94 +11,139 @@
       padding: 0;
     }
 
-    h1 {
+    .section-title {
       text-align: center;
       padding: 60px 20px 20px;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
     }
 
-    .category-grid {
+    .service-section {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 60px auto;
+      gap: 40px;
+      padding: 0 20px;
     }
 
-    .category-card {
-      width: 280px;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.2s;
+    .service-section:nth-child(even) {
+      flex-direction: row-reverse;
     }
 
-    .category-card:hover {
-      transform: scale(1.03);
+    .service-text {
+      flex: 1;
+      min-width: 300px;
     }
 
-    .category-card img {
+    .service-text h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .service-text ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    .service-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .service-image img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .category-card h3 {
-      margin: 0;
-      padding: 15px 10px;
-      font-size: 16px;
-    }
-
-    .category-card a {
-      display: inline-block;
-      margin-bottom: 20px;
-      background-color: #000;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 14px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     @media (max-width: 768px) {
-      .category-card {
-        width: 90%;
+      .service-section {
+        flex-direction: column !important;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Other Renovation Services</h1>
+  <div class="section-title">Other Renovation Services</div>
 
-  <div class="category-grid">
-    <div class="category-card">
-      <img src="images/exterior_work.jpg" alt="Exterior Work">
-      <h3>Exterior Work</h3>
-      <a href="exterior.html">View Projects</a>
+  <!-- 1. Exterior Work -->
+  <div class="service-section">
+    <div class="service-image">
+      <img src="images/Apartment Basement Parking Lot Repair Work in Akishima City-after1.jpg" alt="Exterior Work">
     </div>
-    <div class="category-card">
-      <img src="images/painting_work.jpg" alt="Painting Work">
-      <h3>Painting Work</h3>
-      <a href="painting.html">View Projects</a>
+    <div class="service-text">
+      <h2>Exterior Work</h2>
+      <ul>
+        <li>Apartment Basement Parking Lot Repair Work in Akishima City</li>
+        <li>Tile Installation on Apartment Balcony</li>
+      </ul>
     </div>
-    <div class="category-card">
-      <img src="images/aircon_installation.jpg" alt="Air Conditioner Installation">
-      <h3>Air Conditioner Installation</h3>
-      <a href="aircon.html">View Projects</a>
+  </div>
+
+  <!-- 2. Painting Work -->
+  <div class="service-section">
+    <div class="service-image">
+      <img src="images/Roof Painting Work at Mr. S’s Residence in Arakawa Ward-after1.jpg" alt="Painting Work">
     </div>
-    <div class="category-card">
-      <img src="images/general_renovation.jpg" alt="General Renovation">
-      <h3>General Renovation</h3>
-      <a href="general.html">View Projects</a>
+    <div class="service-text">
+      <h2>Painting Work</h2>
+      <ul>
+        <li>Roof Painting Work at Mr. S’s Residence in Arakawa Ward</li>
+        <li>Exterior Wall Painting of a Condominium in Arakawa Ward</li>
+      </ul>
     </div>
-    <div class="category-card">
-      <img src="images/other_work.jpg" alt="Other Construction Work">
-      <h3>Other Construction Work</h3>
-      <a href="misc.html">View Projects</a>
+  </div>
+
+  <!-- 3. Air Conditioner Installation -->
+  <div class="service-section">
+    <div class="service-image">
+      <img src="images/Air Conditioner Installation at Mr. S’s Residence in Arakawa Ward-after.jpg" alt="Air Conditioner Installation">
+    </div>
+    <div class="service-text">
+      <h2>Air Conditioner Installation</h2>
+      <ul>
+        <li>Air Conditioner Installation at Mr. S’s Residence in Arakawa Ward</li>
+        <li>Air Conditioner Installation at a Condominium in Chiyoda Ward</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4. General Renovation -->
+  <div class="service-section">
+    <div class="service-image">
+      <img src="images/Comprehensive Renovation of a Vacant Space in Katsushika Ward, Tokyo-after.jpg" alt="General Renovation">
+    </div>
+    <div class="service-text">
+      <h2>General Renovation</h2>
+      <ul>
+        <li>Comprehensive Renovation of a Vacant Space in Katsushika Ward</li>
+        <li>Ramen Restaurant Renovation in Nishiogu, Arakawa Ward</li>
+        <li>Condominium Renovation in Higashi-Jujo</li>
+        <li>Storefront Renovation in Sangenjaya Station Area</li>
+        <li>One-Room Apartment in Funabori, Edogawa Ward</li>
+        <li>One-Room Apartment Renovation in Arakawa Ward</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. Other Construction Work -->
+  <div class="service-section">
+    <div class="service-image">
+      <img src="images/Wood Deck Construction Due to Termite Damage in Arakawa Ward-after.jpg" alt="Other Construction">
+    </div>
+    <div class="service-text">
+      <h2>Other Construction Work</h2>
+      <ul>
+        <li>Wood Deck Construction Due to Termite Damage in Arakawa Ward</li>
+        <li>Booth Construction at Tokyo Big Sight Event Venue</li>
+        <li>Sash Installation Work in Kuramae, Taito Ward</li>
+      </ul>
     </div>
   </div>
 
